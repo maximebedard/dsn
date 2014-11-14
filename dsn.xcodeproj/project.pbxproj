@@ -13,6 +13,8 @@
 		3A01FD9A1A0C3B7500F61F97 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A01FD991A0C3B7500F61F97 /* Images.xcassets */; };
 		3A01FD9D1A0C3B7500F61F97 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A01FD9B1A0C3B7500F61F97 /* LaunchScreen.xib */; };
 		3A01FDA91A0C3B7500F61F97 /* dsnTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A01FDA81A0C3B7500F61F97 /* dsnTests.swift */; };
+		3A01FDB31A0C419100F61F97 /* editor.html in Resources */ = {isa = PBXBuildFile; fileRef = 3A01FDB21A0C419100F61F97 /* editor.html */; };
+		3A49EC461A1572810084EC41 /* CodeEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A49EC441A1572810084EC41 /* CodeEditorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		3A01FDA21A0C3B7500F61F97 /* dsnTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dsnTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A01FDA71A0C3B7500F61F97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A01FDA81A0C3B7500F61F97 /* dsnTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dsnTests.swift; sourceTree = "<group>"; };
+		3A01FDB21A0C419100F61F97 /* editor.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = editor.html; sourceTree = "<group>"; };
+		3A49EC441A1572810084EC41 /* CodeEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeEditorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +81,11 @@
 		3A01FD8F1A0C3B7500F61F97 /* dsn */ = {
 			isa = PBXGroup;
 			children = (
+				3A49EC491A15734C0084EC41 /* controllers */,
+				3A49EC481A15732D0084EC41 /* views */,
 				3A01FD921A0C3B7500F61F97 /* AppDelegate.swift */,
-				3A01FD941A0C3B7500F61F97 /* ViewController.swift */,
 				3A01FD961A0C3B7500F61F97 /* Main.storyboard */,
 				3A01FD991A0C3B7500F61F97 /* Images.xcassets */,
-				3A01FD9B1A0C3B7500F61F97 /* LaunchScreen.xib */,
 				3A01FD901A0C3B7500F61F97 /* Supporting Files */,
 			);
 			path = dsn;
@@ -90,6 +94,7 @@
 		3A01FD901A0C3B7500F61F97 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3A01FDB21A0C419100F61F97 /* editor.html */,
 				3A01FD911A0C3B7500F61F97 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -110,6 +115,23 @@
 				3A01FDA71A0C3B7500F61F97 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3A49EC481A15732D0084EC41 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				3A01FD9B1A0C3B7500F61F97 /* LaunchScreen.xib */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
+		3A49EC491A15734C0084EC41 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3A01FD941A0C3B7500F61F97 /* ViewController.swift */,
+				3A49EC441A1572810084EC41 /* CodeEditorViewController.swift */,
+			);
+			name = controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A01FD981A0C3B7500F61F97 /* Main.storyboard in Resources */,
+				3A01FDB31A0C419100F61F97 /* editor.html in Resources */,
 				3A01FD9D1A0C3B7500F61F97 /* LaunchScreen.xib in Resources */,
 				3A01FD9A1A0C3B7500F61F97 /* Images.xcassets in Resources */,
 			);
@@ -213,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A01FD951A0C3B7500F61F97 /* ViewController.swift in Sources */,
+				3A49EC461A1572810084EC41 /* CodeEditorViewController.swift in Sources */,
 				3A01FD931A0C3B7500F61F97 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +365,7 @@
 				INFOPLIST_FILE = dsn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -351,6 +376,7 @@
 				INFOPLIST_FILE = dsn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
@@ -407,6 +433,7 @@
 				3A01FDAE1A0C3B7500F61F97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3A01FDAF1A0C3B7500F61F97 /* Build configuration list for PBXNativeTarget "dsnTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +442,7 @@
 				3A01FDB11A0C3B7500F61F97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
