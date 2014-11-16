@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		3A01FD931A0C3B7500F61F97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A01FD921A0C3B7500F61F97 /* AppDelegate.swift */; };
-		3A01FD951A0C3B7500F61F97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A01FD941A0C3B7500F61F97 /* ViewController.swift */; };
+		3A01FD951A0C3B7500F61F97 /* AuthentificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A01FD941A0C3B7500F61F97 /* AuthentificationViewController.swift */; };
 		3A01FD981A0C3B7500F61F97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A01FD961A0C3B7500F61F97 /* Main.storyboard */; };
 		3A01FD9A1A0C3B7500F61F97 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A01FD991A0C3B7500F61F97 /* Images.xcassets */; };
 		3A01FD9D1A0C3B7500F61F97 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A01FD9B1A0C3B7500F61F97 /* LaunchScreen.xib */; };
 		3A01FDA91A0C3B7500F61F97 /* dsnTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A01FDA81A0C3B7500F61F97 /* dsnTests.swift */; };
+		812A30A01A18573800DB5ABD /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A309F1A18573800DB5ABD /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +30,14 @@
 		3A01FD8D1A0C3B7500F61F97 /* dsn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dsn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A01FD911A0C3B7500F61F97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A01FD921A0C3B7500F61F97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3A01FD941A0C3B7500F61F97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3A01FD941A0C3B7500F61F97 /* AuthentificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthentificationViewController.swift; sourceTree = "<group>"; };
 		3A01FD971A0C3B7500F61F97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A01FD991A0C3B7500F61F97 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3A01FD9C1A0C3B7500F61F97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		3A01FDA21A0C3B7500F61F97 /* dsnTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dsnTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A01FDA71A0C3B7500F61F97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A01FDA81A0C3B7500F61F97 /* dsnTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dsnTests.swift; sourceTree = "<group>"; };
+		812A309F1A18573800DB5ABD /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +80,9 @@
 			isa = PBXGroup;
 			children = (
 				3A01FD921A0C3B7500F61F97 /* AppDelegate.swift */,
-				3A01FD941A0C3B7500F61F97 /* ViewController.swift */,
+				3A01FD941A0C3B7500F61F97 /* AuthentificationViewController.swift */,
 				3A01FD961A0C3B7500F61F97 /* Main.storyboard */,
+				812A309F1A18573800DB5ABD /* ProfileViewController.swift */,
 				3A01FD991A0C3B7500F61F97 /* Images.xcassets */,
 				3A01FD9B1A0C3B7500F61F97 /* LaunchScreen.xib */,
 				3A01FD901A0C3B7500F61F97 /* Supporting Files */,
@@ -212,7 +215,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A01FD951A0C3B7500F61F97 /* ViewController.swift in Sources */,
+				812A30A01A18573800DB5ABD /* ProfileViewController.swift in Sources */,
+				3A01FD951A0C3B7500F61F97 /* AuthentificationViewController.swift in Sources */,
 				3A01FD931A0C3B7500F61F97 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,6 +411,7 @@
 				3A01FDAE1A0C3B7500F61F97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3A01FDAF1A0C3B7500F61F97 /* Build configuration list for PBXNativeTarget "dsnTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +420,7 @@
 				3A01FDB11A0C3B7500F61F97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
