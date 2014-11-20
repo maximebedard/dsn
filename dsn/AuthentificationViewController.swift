@@ -8,12 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class AuthentificationViewController: UIViewController {
 
-    @IBOutlet weak var webView: CodeEditorViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        webView.loadCodeEditor();
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,4 +22,3 @@ class ViewController: UIViewController {
 
 
 }
-
