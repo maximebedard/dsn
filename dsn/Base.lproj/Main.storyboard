@@ -212,6 +212,46 @@
             </objects>
             <point key="canvasLocation" x="2004" y="308"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8Vv-JW-jJy">
+            <objects>
+                <navigationController id="sXi-ra-Bf7" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DmY-ik-zak">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="3k6-F1-1hC" kind="relationship" relationship="rootViewController" id="pBb-1s-AcQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VBR-I7-jmg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2208" y="-584"/>
+        </scene>
+        <!--Nouvelle publication-->
+        <scene sceneID="CwD-KV-1Ik">
+            <objects>
+                <viewController id="3k6-F1-1hC" customClass="NouvellePublicationViewController" customModule="dsn" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YLn-PW-Ryc"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rah-7t-cmh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YnX-5l-87p">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Nouvelle publication" id="arm-f0-b0M">
+                        <barButtonItem key="leftBarButtonItem" image="reveal-icon.png" id="Yiy-nz-5gP"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="btnMenu" destination="Yiy-nz-5gP" id="6MX-e1-i9i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J0C-e5-SUR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2909" y="-565"/>
+        </scene>
         <!--Reveal View Controller-->
         <scene sceneID="szk-uc-zFZ">
             <objects>
@@ -250,6 +290,16 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="iOo-Mk-jGd" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="ZRS-37-1aR"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="publication" id="wne-dJ-oWs">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wne-dJ-oWs" id="eqv-cu-T8E">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="sXi-ra-Bf7" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="ayr-IT-nKX"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
