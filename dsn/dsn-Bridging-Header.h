@@ -10,5 +10,6 @@
 #define dsn_dsn_Bridging_Header_h
 
 #import <SWRevealViewController/SWRevealViewController.h>
+#import <ActionSheetPicker-3.0/ActionSheetStringPicker.h>
 
 #endif
