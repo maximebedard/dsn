@@ -8,19 +8,27 @@
 
 import UIKit
 
-class CommentViewCell: UITableViewCell {
-    @IBOutlet weak var but1: UIButton!
-    @IBOutlet weak var but2: UIButton!
+class CommentViewCell: UITableViewCell, UITextViewDelegate {
+    @IBOutlet weak var imgMember: UIImageView!
+    @IBOutlet weak var txtMember: UILabel!
+    @IBOutlet weak var txtDatePublication: UILabel!
+    @IBOutlet weak var txtNombreVotes: UILabel!
+    @IBOutlet weak var txtCommentaire: UITextView!
 
+    /**
+    Called when nib is being loaded.
+    */
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    /**
+    Makes the comment same height of it's content so you don't have to scroll.
+    
+    :param: textView The textView that changed.
+    */
+    func textViewDidChange(textView: UITextView) {
+        textView.sizeToFit()
+        self.sizeToFit()
     }
-
 }
