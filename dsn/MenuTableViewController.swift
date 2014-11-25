@@ -31,7 +31,7 @@ class MenuTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 2
+        return 3
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -45,6 +45,9 @@ class MenuTableViewController: UITableViewController {
         case 1:
             cellTitle = "Nouvelle publication"
             cellID = "publication"
+        case 2:
+            cellTitle = "Test de commentaire"
+            cellID = "testComment"
         default:
             cellTitle = "lol"
         }
