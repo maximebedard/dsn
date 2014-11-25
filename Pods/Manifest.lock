@@ -1,10 +1,13 @@
 PODS:
+  - ActionSheetPicker-3.0 (1.2.0)
   - SWRevealViewController (2.3.0)
 
 DEPENDENCIES:
+  - ActionSheetPicker-3.0 (~> 1.2.0)
   - SWRevealViewController (~> 2.3)
 
 SPEC CHECKSUMS:
+  ActionSheetPicker-3.0: e261c5b5cf47e4b4efa8cb3d186be30d4b145b76
   SWRevealViewController: f6d80638b8e12323e87ac79562345403a799cb77
 
-COCOAPODS: 0.33.1
+COCOAPODS: 0.35.0
