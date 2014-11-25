@@ -221,34 +221,42 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Esu-0T-Qf5" kind="relationship" relationship="rootViewController" id="xGY-by-64l"/>
+                        <segue destination="brE-xl-MgG" kind="relationship" relationship="rootViewController" id="UxR-DA-jso"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ch2-g3-3et" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2208" y="-1282"/>
         </scene>
-        <!--Communautes View Controller-->
-        <scene sceneID="5d0-jm-9Fo">
+        <!--Communautes Table View Controller-->
+        <scene sceneID="IEG-Wi-kI3">
             <objects>
-                <viewController id="Esu-0T-Qf5" customClass="CommunautesViewController" customModule="dsn" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="id9-gk-7xU"/>
-                        <viewControllerLayoutGuide type="bottom" id="GLc-0G-Mhd"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="4Ue-kh-BRX">
+                <tableViewController id="brE-xl-MgG" customClass="CommunautesTableViewController" customModule="dsn" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Esi-cT-uKW">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="ALj-Sk-SP7">
-                        <barButtonItem key="leftBarButtonItem" image="reveal-icon.png" id="VQo-BX-GCI"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Nen-xo-HgB">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nen-xo-HgB" id="5ny-zt-Pv7">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="brE-xl-MgG" id="Zbv-0k-aZq"/>
+                            <outlet property="delegate" destination="brE-xl-MgG" id="PUO-dv-lwF"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="aVr-IH-5hM">
+                        <barButtonItem key="leftBarButtonItem" image="reveal-icon.png" id="ggP-wL-VbT"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="btnMenu" destination="VQo-BX-GCI" id="Y5h-6W-Kvp"/>
+                        <outlet property="btnMenu" destination="ggP-wL-VbT" id="nsL-jF-ido"/>
                     </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MaU-3D-vYb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f0P-82-im1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2909" y="-1282"/>
         </scene>
