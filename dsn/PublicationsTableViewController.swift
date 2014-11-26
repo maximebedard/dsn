@@ -1,19 +1,35 @@
 //
-//  MenuTableViewController.swift
+//  PublicationsTableViewController.swift
 //  dsn
 //
-//  Created by Charles Levesque on 2014-11-18.
+//  Created by Maxime Bédard on 2014-11-25.
 //  Copyright (c) 2014 etsmtl. All rights reserved.
 //
 
 import UIKit
 
-class MenuTableViewController: UITableViewController {
+class PublicationsTableViewController: UITableViewController {
+    
+    @IBOutlet weak var btnMenu: UIBarButtonItem!
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        tableView.registerNib(UINib(nibName: "PublicationTableViewCell", bundle: nil), forCellReuseIdentifier: "PublicationTableViewCell")
+        
+        tableView.rowHeight = 500;
     }
+    
+    func menuInit() {
+        if let swController: SWRevealViewController = self.revealViewController(){
+            self.btnMenu.target = self.revealViewController()
+            self.btnMenu.action = NSSelectorFromString("revealToggle:")
+            self.navigationController?.navigationBar.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -31,36 +47,19 @@ class MenuTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 4
+        return 10
     }
 
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell: UITableViewCell
-        var cellTitle: NSString = "", cellID: NSString = "Cell"
 
-        switch indexPath.row{
-        case 0:
-            cellTitle = "Votre Profile"
-            cellID = "profile"
-        case 1:
-            cellTitle = "Nouvelle publication"
-            cellID = "publication"
-        case 2:
-            cellTitle = "Fil de publications"
-            cellID = "publications"
-        case 3:
-            cellTitle = "Communautés"
-            cellID = "communaute"
-        default:
-            cellTitle = "lol"
-        }
-
-        cell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath) as UITableViewCell
-        cell.textLabel.text = cellTitle
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("PublicationTableViewCell", forIndexPath: indexPath) as PublicationTableViewCell
         
         return cell
     }
-
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -96,11 +95,14 @@ class MenuTableViewController: UITableViewController {
     }
     */
 
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        if let senderCell = sender as? UITableViewCell{
-            let navController: UINavigationController = segue.destinationViewController as UINavigationController
-        }
+        // Get the new view controller using [segue destinationViewController].
+        // Pass the selected object to the new view controller.
     }
+    */
 
 }
