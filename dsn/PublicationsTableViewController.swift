@@ -10,7 +10,7 @@ import UIKit
 
 class PublicationsTableViewController: UITableViewController {
     
-    @IBOutlet weak var btnMenu: UIBarButtonItem!
+    @IBOutlet weak var btnMenu: MainMenuBarButtonItem!
     
     
     
@@ -20,16 +20,9 @@ class PublicationsTableViewController: UITableViewController {
         tableView.registerNib(UINib(nibName: "PublicationTableViewCell", bundle: nil), forCellReuseIdentifier: "PublicationTableViewCell")
         
         tableView.rowHeight = 500;
+        
+        btnMenu.loadMenuToggle(self)
     }
-    
-    func menuInit() {
-        if let swController: SWRevealViewController = self.revealViewController(){
-            self.btnMenu.target = self.revealViewController()
-            self.btnMenu.action = NSSelectorFromString("revealToggle:")
-            self.navigationController?.navigationBar.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        }
-    }
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

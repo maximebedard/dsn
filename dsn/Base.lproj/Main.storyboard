@@ -201,7 +201,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fzd-E4-a88">
-                        <barButtonItem key="leftBarButtonItem" image="reveal-icon.png" style="plain" id="FRG-xs-TUN"/>
+                        <barButtonItem key="leftBarButtonItem" image="reveal-icon.png" style="plain" id="FRG-xs-TUN" customClass="MainMenuBarButtonItem" customModule="dsn" customModuleProvider="target"/>
                     </navigationItem>
                     <connections>
                         <outlet property="btnEnregistrer" destination="pRS-CA-DEm" id="wbL-cC-ilC"/>
@@ -332,7 +332,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="zXv-d1-FRI">
-                        <barButtonItem key="leftBarButtonItem" image="reveal-icon.png" id="FdK-M1-Wsb"/>
+                        <barButtonItem key="leftBarButtonItem" image="reveal-icon.png" id="FdK-M1-Wsb" customClass="MainMenuBarButtonItem" customModule="dsn" customModuleProvider="target"/>
                     </navigationItem>
                     <connections>
                         <outlet property="btnMenu" destination="FdK-M1-Wsb" id="TM8-dO-2dV"/>
@@ -396,7 +396,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="C1O-Fm-Rpi">
-                        <barButtonItem key="leftBarButtonItem" image="reveal-icon.png" id="Z56-hh-mek"/>
+                        <barButtonItem key="leftBarButtonItem" image="reveal-icon.png" id="Z56-hh-mek" customClass="MainMenuBarButtonItem" customModule="dsn" customModuleProvider="target"/>
                     </navigationItem>
                     <connections>
                         <outlet property="btnMenu" destination="Z56-hh-mek" id="jUn-3L-ngR"/>
@@ -464,16 +464,19 @@
                                     <action selector="selectLanguage:" destination="nXQ-rB-eOm" eventType="touchUpInside" id="uOK-S0-Nop"/>
                                 </connections>
                             </button>
-                            <webView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2dX-Vz-fb1" customClass="CodeEditorViewController" customModule="dsn" customModuleProvider="target">
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2dX-Vz-fb1" customClass="CodeEditorViewController" customModule="dsn" customModuleProvider="target">
                                 <rect key="frame" x="34" y="194" width="533" height="279"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="279" id="A02-b4-H3F"/>
                                 </constraints>
                             </webView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6h7-CE-scb">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6h7-CE-scb">
                                 <rect key="frame" x="34" y="485" width="533" height="95"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="eSB-kY-jp9"/>
+                                </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -493,10 +496,11 @@
                             <constraint firstItem="6h7-CE-scb" firstAttribute="top" secondItem="2dX-Vz-fb1" secondAttribute="bottom" constant="12" id="mXs-0Y-bxH"/>
                             <constraint firstAttribute="bottom" secondItem="6h7-CE-scb" secondAttribute="bottom" constant="20" id="nBq-kj-cAl"/>
                             <constraint firstItem="2dX-Vz-fb1" firstAttribute="leading" secondItem="AJa-NE-OsT" secondAttribute="leading" constant="34" id="rBn-vl-QmD"/>
+                            <constraint firstItem="2dX-Vz-fb1" firstAttribute="top" secondItem="AJa-NE-OsT" secondAttribute="top" constant="194" id="zWB-Xh-QG2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Nouvelle publication" id="aIJ-PB-5cz">
-                        <barButtonItem key="leftBarButtonItem" image="reveal-icon.png" id="H4X-BQ-oEr"/>
+                        <barButtonItem key="leftBarButtonItem" image="reveal-icon.png" id="H4X-BQ-oEr" customClass="MainMenuBarButtonItem" customModule="dsn" customModuleProvider="target"/>
                         <barButtonItem key="rightBarButtonItem" title="Enregistrer" id="p8F-d0-ebh"/>
                     </navigationItem>
                     <connections>

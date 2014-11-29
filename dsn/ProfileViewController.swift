@@ -10,22 +10,15 @@ import UIKit
 
 class ProfileViewController: UIViewController{
     @IBOutlet weak var btnEnregistrer: UIButton!
-    @IBOutlet weak var btnMenu: UIBarButtonItem!
+    @IBOutlet weak var btnMenu: MainMenuBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.menuInit()
+        btnMenu.loadMenuToggle(self)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    func menuInit() {
-        if let swController: SWRevealViewController = self.revealViewController(){
-            self.btnMenu.target = self.revealViewController()
-            self.btnMenu.action = NSSelectorFromString("revealToggle:")
-            self.navigationController?.navigationBar.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        }
-    }
 }
