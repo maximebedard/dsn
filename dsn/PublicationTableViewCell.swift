@@ -10,13 +10,29 @@ import UIKit
 
 class PublicationTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var webView: CodeEditorViewController!
+    @IBOutlet weak var lblTitle: UILabel!
+    @IBOutlet weak var lblAuthor: UILabel!
+    @IBOutlet weak var lblDate: NSLayoutConstraint!
+    
+    @IBOutlet weak var lblCommentaires: UILabel!
+    @IBOutlet weak var lblDescription: UITextView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.sizeToFit()
-        webView.loadCodeEditor()
-        // Initialization code
+        
+        lblDescription.userInteractionEnabled = false
+        
+        lblCommentaires.backgroundColor = UIColor.clearColor()
+        lblCommentaires.textColor = UIColor.whiteColor()
+        lblCommentaires.layer.backgroundColor = UIColor(red:0.086, green:0.494, blue:0.984, alpha:1).CGColor
+        lblCommentaires.layer.cornerRadius = 8
+        lblCommentaires.layer.masksToBounds = false
+        lblCommentaires.layer.shouldRasterize = true
     }
 
+    override func setSelected(selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
     
 }
