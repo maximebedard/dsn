@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -325,7 +326,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="y69-9y-6bu" kind="show" id="dFm-zf-We5"/>
+                                    <segue destination="y69-9y-6bu" kind="show" identifier="details" id="dFm-zf-We5"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -517,10 +518,10 @@
             </objects>
             <point key="canvasLocation" x="2909" y="-537"/>
         </scene>
-        <!--View Controller-->
+        <!--Publication View Controller-->
         <scene sceneID="mvT-nE-9wC">
             <objects>
-                <viewController id="y69-9y-6bu" sceneMemberID="viewController">
+                <viewController id="y69-9y-6bu" customClass="PublicationViewController" customModule="dsn" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qO0-fG-Tc9"/>
                         <viewControllerLayoutGuide type="bottom" id="pds-K8-gWU"/>
@@ -528,8 +529,60 @@
                     <view key="view" contentMode="scaleToFill" id="uvK-aA-9ZI">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xwh-Nk-El1">
+                                <rect key="frame" x="16" y="72" width="568" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="6gR-gP-d81"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C2L-rH-FHR">
+                                <rect key="frame" x="16" y="115" width="260" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="X6e-g3-DRL"/>
+                                    <constraint firstAttribute="height" constant="21" id="rrM-Lv-dH5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4j-V7-JJo">
+                                <rect key="frame" x="324" y="115" width="260" height="21"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="10"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TcB-A5-X5F" customClass="CodeEditorViewController" customModule="dsn" customModuleProvider="target">
+                                <rect key="frame" x="16" y="144" width="568" height="243"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="r4j-V7-JJo" firstAttribute="leading" secondItem="C2L-rH-FHR" secondAttribute="trailing" constant="48" id="2gS-X0-0tk"/>
+                            <constraint firstItem="Xwh-Nk-El1" firstAttribute="leading" secondItem="uvK-aA-9ZI" secondAttribute="leadingMargin" id="3Ej-nS-ZKC"/>
+                            <constraint firstItem="pds-K8-gWU" firstAttribute="top" secondItem="TcB-A5-X5F" secondAttribute="bottom" constant="213" id="6DB-KT-Bm1"/>
+                            <constraint firstItem="C2L-rH-FHR" firstAttribute="leading" secondItem="TcB-A5-X5F" secondAttribute="leading" id="9If-aD-y1L"/>
+                            <constraint firstItem="r4j-V7-JJo" firstAttribute="trailing" secondItem="uvK-aA-9ZI" secondAttribute="trailingMargin" id="GPV-iY-8EI"/>
+                            <constraint firstItem="C2L-rH-FHR" firstAttribute="leading" secondItem="Xwh-Nk-El1" secondAttribute="leading" id="L0H-Go-9tX"/>
+                            <constraint firstItem="C2L-rH-FHR" firstAttribute="baseline" secondItem="r4j-V7-JJo" secondAttribute="baseline" id="OAf-Hv-Nad"/>
+                            <constraint firstItem="TcB-A5-X5F" firstAttribute="trailing" secondItem="r4j-V7-JJo" secondAttribute="trailing" id="Qad-bE-kOE"/>
+                            <constraint firstItem="Xwh-Nk-El1" firstAttribute="top" secondItem="qO0-fG-Tc9" secondAttribute="bottom" constant="8" symbolic="YES" id="dP8-qZ-5vG"/>
+                            <constraint firstItem="r4j-V7-JJo" firstAttribute="trailing" secondItem="Xwh-Nk-El1" secondAttribute="trailing" id="gBS-pr-s9u"/>
+                            <constraint firstItem="C2L-rH-FHR" firstAttribute="firstBaseline" secondItem="r4j-V7-JJo" secondAttribute="firstBaseline" id="lqx-f8-paN"/>
+                            <constraint firstItem="TcB-A5-X5F" firstAttribute="top" secondItem="C2L-rH-FHR" secondAttribute="bottom" constant="8" symbolic="YES" id="peJ-Cf-Oj0"/>
+                            <constraint firstItem="C2L-rH-FHR" firstAttribute="top" secondItem="Xwh-Nk-El1" secondAttribute="bottom" constant="8" symbolic="YES" id="xtw-L9-ua3"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lblAuthor" destination="C2L-rH-FHR" id="0h4-5R-ba1"/>
+                        <outlet property="lblDate" destination="r4j-V7-JJo" id="4Od-Qb-5gG"/>
+                        <outlet property="lblTitle" destination="Xwh-Nk-El1" id="b0E-2x-7Vo"/>
+                        <outlet property="webView" destination="TcB-A5-X5F" id="fKT-RD-jgt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0EV-Yg-k87" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

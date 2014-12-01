@@ -29,7 +29,7 @@
                             <constraint firstAttribute="width" constant="300" id="9Eg-F6-jQg"/>
                             <constraint firstAttribute="height" constant="21" id="ihg-SX-phv"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -38,7 +38,7 @@
                         <constraints>
                             <constraint firstAttribute="width" constant="181" id="JSm-et-JRV"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <fontDescription key="fontDescription" type="italicSystem" pointSize="10"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -80,7 +80,7 @@
             <connections>
                 <outlet property="lblAuthor" destination="EN5-mR-I5y" id="IId-PL-HLD"/>
                 <outlet property="lblCommentaires" destination="T8k-en-qxg" id="LKe-Rj-fvz"/>
-                <outlet property="lblDate" destination="Nai-1R-M9T" id="xJF-9R-fDg"/>
+                <outlet property="lblDate" destination="igK-wl-omf" id="gW0-cv-dtC"/>
                 <outlet property="lblDescription" destination="h2m-hN-Jfi" id="U36-RT-mXJ"/>
                 <outlet property="lblTitle" destination="Bfj-Hd-dhL" id="Ovb-tW-nSk"/>
             </connections>

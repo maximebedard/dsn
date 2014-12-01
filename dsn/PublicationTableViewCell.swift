@@ -12,8 +12,9 @@ class PublicationTableViewCell: UITableViewCell {
 
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblAuthor: UILabel!
-    @IBOutlet weak var lblDate: NSLayoutConstraint!
     
+    
+    @IBOutlet weak var lblDate: UILabel!
     @IBOutlet weak var lblCommentaires: UILabel!
     @IBOutlet weak var lblDescription: UITextView!
     
