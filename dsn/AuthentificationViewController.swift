@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AuthentificationViewController: UIViewController {
+class AuthentificationViewController: ApplicationController {
 
     
     override func viewDidLoad() {
@@ -18,6 +18,7 @@ class AuthentificationViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        
     }
 
 

@@ -9,7 +9,7 @@
         <!--Authentification View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="AuthentificationViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="AuthentificationViewController" customModule="dsn" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -326,7 +326,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="y69-9y-6bu" kind="show" identifier="details" id="dFm-zf-We5"/>
+                                    <segue destination="y69-9y-6bu" kind="show" identifier="details" id="mFs-Ik-1O7"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

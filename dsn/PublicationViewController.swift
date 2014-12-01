@@ -8,7 +8,9 @@
 
 import UIKit
 
-class PublicationViewController: UIViewController {
+class PublicationViewController: UIViewController, UIWebViewDelegate {
+    
+    var publication : JSON = JSON.nullJSON
 
     @IBOutlet weak var webView: CodeEditorViewController!
     @IBOutlet weak var lblDate: UILabel!
@@ -17,7 +19,14 @@ class PublicationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         webView.loadCodeEditor()
-        // Do any additional setup after loading the view.
+
+        
+        lblTitle.text = publication["title"].string
+        lblAuthor.text = publication["author"].string
+        lblDate.text = publication["date"].string
+        
+        webView.delegate = self
+    
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,15 +34,11 @@ class PublicationViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func webViewDidFinishLoad(webView: UIWebView) {
+        let wv = webView as CodeEditorViewController
+        wv.code = publication["snippet"].string!
+        wv.language = publication["language"].string!
     }
-    */
 
 }

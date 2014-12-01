@@ -25,7 +25,7 @@ class PublicationsTableViewController: UITableViewController, UITableViewDelegat
             publications = JSON(data:data)
         }
         
-        
+        self.tableView.delegate = self;
         
         NSLog("nb publications : \(publications.count)")
 
@@ -73,30 +73,22 @@ class PublicationsTableViewController: UITableViewController, UITableViewDelegat
     }
     
     
-    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.performSegueWithIdentifier("details", sender:self)
+
     }
     
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        //if segue.identifier == "CurrentEvent" {
-            
-            NSLog("QWDQWDQWD")
-            
-            
+        if segue.identifier == "details" {
+            NSLog("QDQWDQW")
             let vc = segue.destinationViewController as PublicationViewController
+                
+            let indexPath : NSIndexPath = self.tableView.indexPathForSelectedRow()!
             
-            let row = self.tableView.indexPathForSelectedRow()
-            
-            vc.lblTitle.text = publications[row!.row]["title"].string
-            
-        
-            
-        //}
-        
-        
+            vc.publication = publications[indexPath.row]
+        }
     }
 
 

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController{
+class ProfileViewController: ApplicationController{
     @IBOutlet weak var btnEnregistrer: UIButton!
     @IBOutlet weak var btnMenu: MainMenuBarButtonItem!
     
