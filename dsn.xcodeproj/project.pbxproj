@@ -25,6 +25,11 @@
 		3A29C02F1A2D6F0800FE378D /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3A29C0271A2D6F0800FE378D /* 6.jpg */; };
 		3A29C0301A2D6F0800FE378D /* 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3A29C0281A2D6F0800FE378D /* 7.jpg */; };
 		3A29C0311A2D6F0800FE378D /* 8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3A29C0291A2D6F0800FE378D /* 8.jpg */; };
+		3A29C0391A2DF69800FE378D /* CommentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A29C0381A2DF69800FE378D /* CommentView.xib */; };
+		3A29C03B1A2DF76B00FE378D /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A29C03A1A2DF76B00FE378D /* CommentView.swift */; };
+		3A29C03D1A2DFB2B00FE378D /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A29C03C1A2DFB2B00FE378D /* UIImageExtensions.swift */; };
+		3A29C03F1A2E031F00FE378D /* PublicationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A29C03E1A2E031F00FE378D /* PublicationView.xib */; };
+		3A29C0411A2E032E00FE378D /* PublicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A29C0401A2E032E00FE378D /* PublicationView.swift */; };
 		3A3530A41A1EAA0800927038 /* CodeEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3530A31A1EAA0800927038 /* CodeEditorViewController.swift */; };
 		3A47BFC71A2CB661006AC43F /* authors.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A47BFC61A2CB661006AC43F /* authors.json */; };
 		3A5BDE391A1EAF780084B32B /* NouvellePublicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5BDE381A1EAF780084B32B /* NouvellePublicationViewController.swift */; };
@@ -79,6 +84,11 @@
 		3A29C0271A2D6F0800FE378D /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpg; sourceTree = "<group>"; };
 		3A29C0281A2D6F0800FE378D /* 7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.jpg; sourceTree = "<group>"; };
 		3A29C0291A2D6F0800FE378D /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpg; sourceTree = "<group>"; };
+		3A29C0381A2DF69800FE378D /* CommentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentView.xib; sourceTree = "<group>"; };
+		3A29C03A1A2DF76B00FE378D /* CommentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
+		3A29C03C1A2DFB2B00FE378D /* UIImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
+		3A29C03E1A2E031F00FE378D /* PublicationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PublicationView.xib; sourceTree = "<group>"; };
+		3A29C0401A2E032E00FE378D /* PublicationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicationView.swift; sourceTree = "<group>"; };
 		3A3530A31A1EAA0800927038 /* CodeEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeEditorViewController.swift; sourceTree = "<group>"; };
 		3A47BFC61A2CB661006AC43F /* authors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = authors.json; sourceTree = "<group>"; };
 		3A5BDE381A1EAF780084B32B /* NouvellePublicationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NouvellePublicationViewController.swift; sourceTree = "<group>"; };
@@ -191,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				3A0F3B6C1A2CB14E00ED5658 /* SwiftyJSON.swift */,
+				3A29C03C1A2DFB2B00FE378D /* UIImageExtensions.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -243,6 +254,10 @@
 				3A93C5E41A254C0000302279 /* PublicationTableViewCell.swift */,
 				3A93C5E51A254C0000302279 /* PublicationTableViewCell.xib */,
 				3A9148781A297149009FE884 /* MainMenuBarButtonItem.swift */,
+				3A29C0381A2DF69800FE378D /* CommentView.xib */,
+				3A29C03A1A2DF76B00FE378D /* CommentView.swift */,
+				3A29C03E1A2E031F00FE378D /* PublicationView.xib */,
+				3A29C0401A2E032E00FE378D /* PublicationView.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -349,10 +364,12 @@
 			files = (
 				3A29C0311A2D6F0800FE378D /* 8.jpg in Resources */,
 				3AD7CBF31A2CFA9D00681701 /* bright_squares.png in Resources */,
+				3A29C03F1A2E031F00FE378D /* PublicationView.xib in Resources */,
 				3A01FD981A0C3B7500F61F97 /* Main.storyboard in Resources */,
 				3A93C5E71A254C0000302279 /* PublicationTableViewCell.xib in Resources */,
 				3A29C02D1A2D6F0800FE378D /* 4.jpg in Resources */,
 				81B4CB5A1A1E8A9E000E3C01 /* reveal-icon@2x.png in Resources */,
+				3A29C0391A2DF69800FE378D /* CommentView.xib in Resources */,
 				810017B91A23FCC300E1F40D /* CommentViewCell.xib in Resources */,
 				3A29C02C1A2D6F0800FE378D /* 3.jpg in Resources */,
 				3A01FD9D1A0C3B7500F61F97 /* LaunchScreen.xib in Resources */,
@@ -421,11 +438,14 @@
 				3A93C5E91A254DC900302279 /* PublicationsTableViewController.swift in Sources */,
 				3A93C5E61A254C0000302279 /* PublicationTableViewCell.swift in Sources */,
 				3A01FD951A0C3B7500F61F97 /* AuthentificationViewController.swift in Sources */,
+				3A29C03D1A2DFB2B00FE378D /* UIImageExtensions.swift in Sources */,
 				3A3530A41A1EAA0800927038 /* CodeEditorViewController.swift in Sources */,
 				3A9148791A297149009FE884 /* MainMenuBarButtonItem.swift in Sources */,
 				3A29C0201A2D602B00FE378D /* ApplicationTableViewController.swift in Sources */,
 				3A01FD931A0C3B7500F61F97 /* AppDelegate.swift in Sources */,
 				3AD7CBF51A2D03E500681701 /* ApplicationController.swift in Sources */,
+				3A29C0411A2E032E00FE378D /* PublicationView.swift in Sources */,
+				3A29C03B1A2DF76B00FE378D /* CommentView.swift in Sources */,
 				810017B71A23FCAA00E1F40D /* CommentViewCell.swift in Sources */,
 				3A5BDE391A1EAF780084B32B /* NouvellePublicationViewController.swift in Sources */,
 				3A93C5E31A254A2F00302279 /* CommunautesTableViewController.swift in Sources */,

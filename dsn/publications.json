@@ -7,6 +7,10 @@
     "language":"ruby",
     "snippet":"class QuickSort\n\ndef self.sort!(keys)\nquick(keys,0,keys.size-1)\nend\n\nprivate\n\ndef self.quick(keys, left, right)\nif left < right\npivot = partition(keys, left, right)\nquick(keys, left, pivot-1)\nquick(keys, pivot+1, right)\nend\nkeys\nend\n\ndef self.partition(keys, left, right)\nx = keys[right]\ni = left-1\nfor j in left..right-1\nif keys[j] <= x\ni += 1\nkeys[i], keys[j] = keys[j], keys[i]\nend\nend\nkeys[i+1], keys[right] = keys[right], keys[i+1]\ni+1\nend\n\nend\n",
     "comments":[
+      {
+        "value":"Hello! This exemple looks brilliant!",
+        "author":""
+      }
 
     ]
   },

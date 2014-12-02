@@ -1,25 +1,33 @@
 [{
+  "username": "henrylemieux",
   "author": "Henry Lemieux",
   "image": "1.jpg"
-}, {
+},
+  "username": "gastonrinfrette", {
   "author": "Gaston Rinfrette",
   "image": "2.jpg"
-}, {
+},
+  "username": "clementbisson", {
   "author": "Clément Bisson",
   "image": "3.jpg"
-}, {
+},
+  "username": "gerarddepardieux", {
   "author": "Gérard Depardieux",
   "image": "4.jpg"
-}, {
+},
+  "username": "gilberteallaire", {
   "author": "Gilberte Allaire",
   "image": "5.jpg"
-} {
+}
+  "username": "leopoldouellette",{
   "author": "Léopold Ouellette",
   "image": "6.jpg"
-}, {
+},
+  "username": "tristantdirect", {
   "author": "Tristant Direct",
   "image": "7.jpg"
-}, {
+},
+  "username": "guygarneau", {
   "author": "Guy Garneau",
   "image": "8.jpg"
 }]
