@@ -13,7 +13,15 @@ class CommentView: UIView {
     
     @IBOutlet var view: UIView!
     
-    @IBOutlet weak var imgProfile: UIImageView!
+    @IBOutlet weak var imgMember: UIImageView!
+    @IBOutlet weak var txtMember: UILabel!
+    @IBOutlet weak var txtDatePublication: UILabel!
+    @IBOutlet weak var txtNombreVotes: UILabel!
+    @IBOutlet weak var txtCommentaire: UITextView!
+    
+    
+    var comment : JSON = JSON.nullJSON
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,13 +33,30 @@ class CommentView: UIView {
         setup()
     }
     
+    init(frame: CGRect, comment : JSON){
+        super.init(frame: frame)
+        self.comment = comment
+        setup()
+    }
+    
     func setup() {
         NSBundle.mainBundle().loadNibNamed("CommentView", owner: self, options: nil)
         self.addSubview(self.view)
         
-        imgProfile.image = UIImage(named: "6.jpg")?.makeRounded(imgProfile.bounds)
+        imgMember.image = UIImage(named: comment["image"].string!)?.makeRounded(imgMember.bounds)
+        txtCommentaire.text = comment["value"].string
+        txtMember.text = comment["author"].string
+        txtDatePublication.text = comment["date"].string
+        
+        txtNombreVotes.text = "\(arc4random_uniform(25))"
         
         view.backgroundColor = UIColor.clearColor()
+        
+        view.sizeToFit()
+
+        txtCommentaire.backgroundColor = UIColor.clearColor()
+
+        
     }
 
 }

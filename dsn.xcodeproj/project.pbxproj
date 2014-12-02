@@ -31,7 +31,6 @@
 		3A29C03F1A2E031F00FE378D /* PublicationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A29C03E1A2E031F00FE378D /* PublicationView.xib */; };
 		3A29C0411A2E032E00FE378D /* PublicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A29C0401A2E032E00FE378D /* PublicationView.swift */; };
 		3A3530A41A1EAA0800927038 /* CodeEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3530A31A1EAA0800927038 /* CodeEditorViewController.swift */; };
-		3A47BFC71A2CB661006AC43F /* authors.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A47BFC61A2CB661006AC43F /* authors.json */; };
 		3A5BDE391A1EAF780084B32B /* NouvellePublicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5BDE381A1EAF780084B32B /* NouvellePublicationViewController.swift */; };
 		3A9148791A297149009FE884 /* MainMenuBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9148781A297149009FE884 /* MainMenuBarButtonItem.swift */; };
 		3A91487B1A297D52009FE884 /* editor.html in Resources */ = {isa = PBXBuildFile; fileRef = 3A91487A1A297D52009FE884 /* editor.html */; };
@@ -90,7 +89,6 @@
 		3A29C03E1A2E031F00FE378D /* PublicationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PublicationView.xib; sourceTree = "<group>"; };
 		3A29C0401A2E032E00FE378D /* PublicationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicationView.swift; sourceTree = "<group>"; };
 		3A3530A31A1EAA0800927038 /* CodeEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeEditorViewController.swift; sourceTree = "<group>"; };
-		3A47BFC61A2CB661006AC43F /* authors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = authors.json; sourceTree = "<group>"; };
 		3A5BDE381A1EAF780084B32B /* NouvellePublicationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NouvellePublicationViewController.swift; sourceTree = "<group>"; };
 		3A9148781A297149009FE884 /* MainMenuBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuBarButtonItem.swift; sourceTree = "<group>"; };
 		3A91487A1A297D52009FE884 /* editor.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = editor.html; sourceTree = "<group>"; };
@@ -171,7 +169,6 @@
 				3A29C0211A2D6F0800FE378D /* authors */,
 				3AD7CBF21A2CFA9D00681701 /* bright_squares.png */,
 				3AD7CBEC1A2CBB0C00681701 /* publications.json */,
-				3A47BFC61A2CB661006AC43F /* authors.json */,
 				3A91487A1A297D52009FE884 /* editor.html */,
 				81B4CB561A1E8A5A000E3C01 /* icons */,
 				3A01FD911A0C3B7500F61F97 /* Info.plist */,
@@ -377,7 +374,6 @@
 				3A29C02F1A2D6F0800FE378D /* 6.jpg in Resources */,
 				3A29C02E1A2D6F0800FE378D /* 5.jpg in Resources */,
 				3A01FD9A1A0C3B7500F61F97 /* Images.xcassets in Resources */,
-				3A47BFC71A2CB661006AC43F /* authors.json in Resources */,
 				3A29C02B1A2D6F0800FE378D /* 2.jpg in Resources */,
 				3A29C02A1A2D6F0800FE378D /* 1.jpg in Resources */,
 				3A29C0301A2D6F0800FE378D /* 7.jpg in Resources */,

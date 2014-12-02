@@ -11,11 +11,14 @@ import UIKit
 class PublicationView: UIView, UIWebViewDelegate {
     
     var publication : JSON = JSON.nullJSON
+    
+    var authors : JSON = JSON.nullJSON
 
     @IBOutlet weak var lblAuthor: UILabel!
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblDate: UILabel!
     
+    @IBOutlet weak var lblDescription: UITextView!
     @IBOutlet var view: UIView!
     
     @IBOutlet weak var webView: CodeEditorViewController!
@@ -44,10 +47,12 @@ class PublicationView: UIView, UIWebViewDelegate {
         lblAuthor.text = publication["author"].string
         lblTitle.text = publication["title"].string
         lblDate.text = publication["date"].string
+        lblDescription.text = publication["description"].string
         
         webView.delegate = self
         
         view.backgroundColor = UIColor.clearColor()
+        lblDescription.backgroundColor = UIColor.clearColor()
         
     }
     

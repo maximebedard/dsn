@@ -11,8 +11,9 @@ import UIKit
 class PublicationViewController: ApplicationViewController, UIWebViewDelegate {
     
     var publication : JSON = JSON.nullJSON
-
     
+    var authors : [Dictionary<String, String>] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,23 +24,26 @@ class PublicationViewController: ApplicationViewController, UIWebViewDelegate {
         self.view.addSubview(sv)
         
         
-        let publicationViewHeight : CGFloat = 600
-        let commentViewHeight : CGFloat = 100
+        let publicationViewHeight : CGFloat = 800
+        let commentViewHeight : CGFloat = 120
 
         
         let publicationView = PublicationView(frame: CGRectMake(0,0, self.view.bounds.width, publicationViewHeight), publication: publication)
         
         sv.addSubview(publicationView)
-        
-        for i in 0...99 {
+        var i : CGFloat = 0
+        for (index: String, subJson: JSON) in publication["comments"] {
+            
             let y : CGFloat = publicationView.bounds.height + (CGFloat(i)  * commentViewHeight)
-        
-            let cv = CommentView(frame: CGRectMake(0, y, self.view.bounds.width, 100))
+            
+            let cv = CommentView(frame: CGRectMake(0, y, self.view.bounds.width, commentViewHeight), comment:subJson)
             
             sv.addSubview(cv)
+            i++
             
         }
-        sv.contentSize = CGSizeMake(self.view.bounds.width, publicationViewHeight + (100 * commentViewHeight))
+        
+        sv.contentSize = CGSizeMake(self.view.bounds.width, publicationViewHeight + (i * commentViewHeight))
         
     }
 

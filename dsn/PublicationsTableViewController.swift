@@ -16,6 +16,8 @@ class PublicationsTableViewController: ApplicationTableViewController, UITableVi
     var publications : JSON = JSON.nullJSON
     
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -82,12 +84,13 @@ class PublicationsTableViewController: ApplicationTableViewController, UITableVi
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "details" {
-            NSLog("QDQWDQW")
+
             let vc = segue.destinationViewController as PublicationViewController
                 
             let indexPath : NSIndexPath = self.tableView.indexPathForSelectedRow()!
             
             vc.publication = publications[indexPath.row]
+
         }
     }
 
