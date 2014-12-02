@@ -30,6 +30,9 @@ class PublicationTableViewCell: UITableViewCell {
         lblCommentaires.layer.cornerRadius = 8
         lblCommentaires.layer.masksToBounds = false
         lblCommentaires.layer.shouldRasterize = true
+        
+        self.backgroundColor = UIColor.clearColor()
+        self.lblDescription.backgroundColor = UIColor.clearColor()
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NouvellePublicationViewController: UIViewController, UIWebViewDelegate {
+class NouvellePublicationViewController: ApplicationViewController, UIWebViewDelegate {
 
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var webView: CodeEditorViewController!

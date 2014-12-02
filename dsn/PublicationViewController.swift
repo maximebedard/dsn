@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PublicationViewController: UIViewController, UIWebViewDelegate {
+class PublicationViewController: ApplicationViewController, UIWebViewDelegate {
     
     var publication : JSON = JSON.nullJSON
 

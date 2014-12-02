@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AuthentificationViewController: ApplicationController {
+class AuthentificationViewController: ApplicationViewController {
 
     
     override func viewDidLoad() {

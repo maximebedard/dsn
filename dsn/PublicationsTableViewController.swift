@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PublicationsTableViewController: UITableViewController, UITableViewDelegate {
+class PublicationsTableViewController: ApplicationTableViewController, UITableViewDelegate {
     
     @IBOutlet weak var btnMenu: MainMenuBarButtonItem!
     
@@ -19,7 +19,7 @@ class PublicationsTableViewController: UITableViewController, UITableViewDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let file = NSBundle.mainBundle().pathForResource("data2", ofType: "json") {
+        if let file = NSBundle.mainBundle().pathForResource("publications", ofType: "json") {
             let data = NSData(contentsOfFile: file)!
             
             publications = JSON(data:data)

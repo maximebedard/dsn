@@ -1,5 +1,5 @@
 //
-//  ApplicationController.swift
+//  ApplicationTableViewController.swift
 //  dsn
 //
 //  Created by Maxime Bédard on 2014-12-01.
@@ -8,8 +8,7 @@
 
 import UIKit
 
-
-class ApplicationViewController : UIViewController {
+class ApplicationTableViewController : UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +19,5 @@ class ApplicationViewController : UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
 }

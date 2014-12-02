@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CommunautesTableViewController: UITableViewController {
+class CommunautesTableViewController: ApplicationTableViewController {
     
     @IBOutlet weak var btnMenu: MainMenuBarButtonItem!
     override func viewDidLoad() {
