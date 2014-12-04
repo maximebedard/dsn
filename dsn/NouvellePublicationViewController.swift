@@ -8,19 +8,24 @@
 
 import UIKit
 
-class NouvellePublicationViewController: UIViewController {
+class NouvellePublicationViewController: ApplicationViewController, UIWebViewDelegate {
 
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var webView: CodeEditorViewController!
     @IBOutlet weak var btnLanguage: UIButton!
-    @IBOutlet weak var btnMenu: UIBarButtonItem!
+    @IBOutlet weak var btnMenu: MainMenuBarButtonItem!
+    
+    let languages = ["JavaScript", "Ruby", "Java", "PHP", "Python", "C++", "C", "Objective-C", "C#", "Shell", "CSS", "Perl", "CoffeeScript", "VimL", "Scala", "Go", "Prolog", "Clojure", "Haskell", "Lua"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.menuInit()
         self.configureTextView()
         webView.loadCodeEditor()
-        // Do any additional setup after loading the view.
+        webView.delegate = self
+        btnMenu.loadMenuToggle(self)
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -33,22 +38,14 @@ class NouvellePublicationViewController: UIViewController {
         textView.layer.borderWidth = 0.5
     }
     
-    func menuInit() {
-        if let swController: SWRevealViewController = self.revealViewController(){
-            self.btnMenu.target = self.revealViewController()
-            self.btnMenu.action = NSSelectorFromString("revealToggle:")
-            self.navigationController?.navigationBar.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        }
-    }
-    
     @IBAction func selectLanguage(sender: UIButton){
         
-        let languages = ["JavaScript", "Ruby", "Java", "PHP", "Python", "C++", "C", "Objective-C", "C#", "Shell", "CSS", "Perl", "CoffeeScript", "VimL", "Scala", "Go", "Prolog", "Clojure", "Haskell", "Lua"]
+
         ActionSheetStringPicker.showPickerWithTitle("Selection du language",
             rows: languages, initialSelection: 0,
             doneBlock: {picker, selectedIndex, selectedValue in
 
-                self.btnLanguage.setTitle(languages[selectedIndex], forState: UIControlState.Normal)
+                self.btnLanguage.setTitle(self.languages[selectedIndex], forState: UIControlState.Normal)
                 return
             },
             cancelBlock: nil,
@@ -56,6 +53,44 @@ class NouvellePublicationViewController: UIViewController {
         
     }
 
+    func webViewDidFinishLoad(webView: UIWebView){
+        self.webView.language = "ruby"
+        
+        var str:String = ""
+        str += "class QuickSort\n"
+        str += " \n"
+        str += "  def self.sort!(keys)\n"
+        str += "    quick(keys,0,keys.size-1)\n"
+        str += "  end\n"
+        str += " \n"
+        str += "  private\n"
+        str += " \n"
+        str += "  def self.quick(keys, left, right)\n"
+        str += "    if left < right\n"
+        str += "      pivot = partition(keys, left, right)\n"
+        str += "      quick(keys, left, pivot-1)\n"
+        str += "      quick(keys, pivot+1, right)\n"
+        str += "    end\n"
+        str += "    keys\n"
+        str += "  end\n"
+        str += " \n"
+        str += "  def self.partition(keys, left, right)\n"
+        str += "    x = keys[right]\n"
+        str += "    i = left-1\n"
+        str += "    for j in left..right-1\n"
+        str += "      if keys[j] <= x\n"
+        str += "        i += 1\n"
+        str += "        keys[i], keys[j] = keys[j], keys[i]\n"
+        str += "      end\n"
+        str += "    end\n"
+        str += "    keys[i+1], keys[right] = keys[right], keys[i+1]\n"
+        str += "    i+1\n"
+        str += "  end\n"
+        str += " \n"
+        str += "end\n"
+        self.webView.code = str
+        
+    }
     
 
     /*

@@ -8,13 +8,10 @@
 
 import UIKit
 
-class CodeEditorViewController: UIWebView {
+class CodeEditorViewController: UIWebView, UIWebViewDelegate {
     
-
-
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder);
-        
     }
 
     func loadCodeEditor() {
@@ -24,9 +21,34 @@ class CodeEditorViewController: UIWebView {
         }
     }
     
-    func getCode() -> NSString {
-        return stringByEvaluatingJavaScriptFromString("document.getElementById('').value")!
+    let codeEditorId = "editor"
+    
+    var code:NSString{
+        get{
+            return stringByEvaluatingJavaScriptFromString("\(editor).getValue();")!
+        }
+        set{
+            stringByEvaluatingJavaScriptFromString("\(editor).setValue(unescape('\(escapeStr(newValue))'));")!
+        }
     }
     
+    var language:NSString{
+        get{
+            return stringByEvaluatingJavaScriptFromString("\(editor).getMode();")!
+        }
+        set{
+            stringByEvaluatingJavaScriptFromString("\(editor).setMode('ace/mode/\(newValue)');")!
+        }
+    }
+    
+    var editor:NSString{
+        get{
+            return "ace.edit('\(codeEditorId)').getSession()"
+        }
+    }
+    
+    func escapeStr(str : String) -> (String) {
+        return CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,str,"[].",":/?&=;+!@#$()',*",CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding))
+    }
 }
 

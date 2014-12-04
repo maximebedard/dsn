@@ -8,24 +8,35 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController{
+class ProfileViewController: ApplicationViewController{
     @IBOutlet weak var btnEnregistrer: UIButton!
-    @IBOutlet weak var btnMenu: UIBarButtonItem!
+    @IBOutlet weak var btnMenu: MainMenuBarButtonItem!
+    @IBOutlet weak var imgProfile: UIImageView!
+    
+    var authors : JSON = JSON.nullJSON
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.menuInit()
+        
+        
+        btnMenu.loadMenuToggle(self)
+    
+        if let file = NSBundle.mainBundle().pathForResource("authors", ofType: "json") {
+            let data = NSData(contentsOfFile: file)!
+            
+            authors = JSON(data:data)
+        }
+        
+        
+        imgProfile.image = UIImage(named: "2.jpg")?.makeRounded(imgProfile.bounds)
+        
+
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    func menuInit() {
-        if let swController: SWRevealViewController = self.revealViewController(){
-            self.btnMenu.target = self.revealViewController()
-            self.btnMenu.action = NSSelectorFromString("revealToggle:")
-            self.navigationController?.navigationBar.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        }
-    }
 }

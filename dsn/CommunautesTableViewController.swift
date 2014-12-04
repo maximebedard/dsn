@@ -8,29 +8,13 @@
 
 import UIKit
 
-class CommunautesTableViewController: UITableViewController {
+class CommunautesTableViewController: ApplicationTableViewController {
     
-    @IBOutlet weak var btnMenu: UIBarButtonItem!
+    @IBOutlet weak var btnMenu: MainMenuBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.menuInit()
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        btnMenu.loadMenuToggle(self)
     }
-    
-    
-    func menuInit() {
-        if let swController: SWRevealViewController = self.revealViewController(){
-            self.btnMenu.target = self.revealViewController()
-            self.btnMenu.action = NSSelectorFromString("revealToggle:")
-            self.navigationController?.navigationBar.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        }
-    }
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
